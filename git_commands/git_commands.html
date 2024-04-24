@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>register</title>
+        <style>
+            body{
+                margin: 0%;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            header{
+                display: flex;
+                background-color: #41a5f6;
+                color: black;
+                align-items: center;
+                border-bottom: 5px solid red;
+                height: 10%;
+            }
+
+            .pravo{
+                margin-left: auto;
+            }
+
+            .levo{
+                line-height: 10px;
+                text-indent: 5%;
+                white-space: nowrap;
+            }
+
+            .levo p{
+                color: white;
+                text-indent: 10%;
+                font-size: 18px;
+            }
+
+            .pravo a{
+                margin: 10px;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+
+            footer{
+                display: flex;
+                flex-direction: column;
+                background-color: #263137;
+                align-items: center ;
+                justify-content: center;
+                width: 100%;
+                height: 10%;
+            }
+
+            footer p{
+                margin-bottom: 0px;
+                color: white;
+            }
+
+            .knopka{
+                align-self: flex-end; 
+                width: min-content; 
+                font-size: 23px; 
+                padding: 3px;
+            }
+
+            .git{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .column{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column p{
+                margin: 6px;
+                color: #a3a3a3;
+            }
+
+            strong{
+                color:black !important;
+            }
+
+            .column h1{
+                margin-top: 6px;
+                margin-bottom: 0px;
+            }
+
+            a{
+                text-decoration: none;
+                color: #2966a4;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="levo">
+                <h1>Мій особистий блог</h1>
+                <p>Шеремет Назар</p>
+            </div>
+            <div class="pravo">
+                <a href="">Вхід</a>
+                <a href="SheremetLab010-1.html">Реєстрація</a>
+            </div>
+        </header>
+        <main>
+            <div class="git">
+                <div class="column">
+                    <div>
+                        <h1 style="color: #74b3d1;">Create a Repository</h1>
+
+                        <p>From scratch Create a new local<br> repository<br><strong>$ git init (project name)</strong></p>
+                        <p>Download from an existing repository<br><strong>$ git clone my_url</strong></p>                                                      
+                    </div>
+                    <div>
+                        <h1 style="color: #6093aa;">Observe your Repository</h1>
+
+                        <p>List new or modified filles not yet<br> committed<br><strong>$ git status</strong></p>
+                        <p>Show the changes to files not yet staged<br><strong>$ git diff</strong></p>
+                        <p>Show the changes to staged files<br><strong>$ git diff--cached</strong></p>
+                        <p>Show all staged and unstaged<br> file changes<br><strong>$ git diff HEAD</strong></p>
+                        <p>Show the changes between two<br> commic ids<br><strong>$ git diff commitl commit2</strong></p>
+                        <p>List the charge dates and authors<br> for a file<br><strong>$ git blye (file)</strong></p>
+                        <p>Show the file changes for a commit<br> id and/or fie<br><strong>$ git show (commit): [file]</strong></p>
+                        <p>Show full change history<br><strong>$ git log</strong></p>
+                        <p>Show change history for file/directory<br> Including diffs<br><strong>git log -p [file/directory]</strong></p>
+                    </div>
+                </div>
+                <div class="column">
+                    <h1 style="color: #86c434;">Working with Branches</h1>
+
+                    <p>List all local branches<br><strong>$ git branch</strong></p>
+                    <p>List all branches, local and remote<br><strong>$ git branch -av</strong></p>
+                    <p>Switch to a branch, my branch,<br> and update working directory<br><strong>$ git checkout my branch</strong></p>
+                    <p>Create a new branch called rew_branch<br><strong>$ git branch new_branch</strong></p>
+                    <p>Delete the branch called my branch<br><strong>$ git branch -d my_branch</strong></p>
+                    <p>Merge branch a into oranch_b<br><strong>$ git checkout branch b</strong><br><strong>$ git merge branch a</strong></p>
+                    <p>Tag the current commit<br><strong>$ git tag my_tag</strong></p>
+                </div>
+                <div class="column">
+                    <h1 style="color: #699926;">Make a change</h1>
+
+                    <p>Stages the file, ready for commit<br><strong>$ git add [file]</strong></p>
+                    <p>Stage all changed files, ready for commit<br><strong>$ git add</strong></p>
+                    <p>Commit all staged files to versioned history<br><strong>$ git commit - "commit message"</strong></p>
+                    <p>Commit all your tracked files to<br> versioned history<br><strong>$ git commit an "commit message"</strong></p>
+                    <p>Unstages file, keeping the file changes<br><strong>$ git reset (file)</strong></p>
+                    <p>Revert everything to the last commit<br><strong>$ git reset --hard</strong></p>
+                </div>
+                <div class="column">
+                    <div>
+                        <h1 style="color: #ee5d2a;">Synchronize</h1>
+
+                        <p>Get the latest changes from ongin<br> (no merge)<br>
+                        <strong>$ git fetch</strong></p>
+                        <p>Fetch the latest changes from origin<br> and merge<br>
+                        <strong>$ git pull</strong></p>
+                        <p>Fetch the latest changes from origin<br> and rebase<br>
+                        <strong>$ git pull --rebase</strong></p>
+                        <p>Push local changes to the origin<br>
+                        <strong>$ git push</strong></p>
+                    </div>
+                    <div>
+                        <h1 style="color: #b43b13;">Finally!</h1>
+
+                        <p>When in doubt, use git help<br> <strong>$ git command --help</strong></p>
+                        <p>Or visit <a href="https://training.github.com/">https://training.github.com/</a><br> for official GitHub training</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© Всі права захищені.</p>
+            <p style="margin-top: 0%;">Розробник курсант 102 навчальної групи Шеремет Н.В</p>
+        </footer>
+    </body>
+</html>
