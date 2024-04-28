@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+}
+
+.layout{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    height: 10%;
+    background-color: #41a5f6;
+    color: black;
+    align-items: center;
+    border-bottom: 5px solid red;
+    flex-shrink: 0;
+}
+
+.pravo{
+    margin-left: auto;
+}
+
+.levo{
+    line-height: 10px;
+    text-indent: 5%;
+    white-space: nowrap;
+}
+
+.levo p{
+    color: white;
+    text-indent: 10%;
+    font-size: 18px;
+}
+
+.pravo a{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main{
+    background-color: white;
+    flex-grow: 1;
+}
+
+.forma{
+    width: 30%;
+    margin: 2% auto;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nazva{
+    display: flex;
+    background-color: #41a5f6;
+    justify-content: center;
+    width: 100%;
+    color: white;
+}
+
+form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputtext {
+    margin: 0 auto;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 15%;
+    background-color: #263137;
+    flex-shrink: 0;
+}
+
+footer p{
+    margin-bottom: 0px;
+    color: white;
+}
+
+.knopka{
+    align-self: flex-end; 
+    width: min-content; 
+    font-size: 23px; 
+    padding: 3px;
+}
