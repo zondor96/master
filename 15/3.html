@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Divide by 2 example</title>
+</head>
+<body>
+  <p id="result"></p>
+  <p id="counter"></p>
+
+  <script>
+    let numb = 10000;
+    let result = numb;
+    let counter = 0;
+
+    do {
+      result /= 2;
+      counter++;
+    } while (result >= 50);
+
+    document.getElementById('result').innerText = `результат- ${result}`;
+    document.getElementById('counter').innerText = `кількість спроб- ${counter}`;
+  </script>
+</body>
+</html>

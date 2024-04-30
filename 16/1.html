@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <img
+      src="img/Discord.png"
+      alt="Image 1"
+      id="image1"
+      style="width: 200px; height: 300px"
+    />
+    <img
+      src="img/Signal.png"
+      alt="Image 2"
+      id="image2"
+      style="width: 200px; height: 300px"
+    />
+    <img
+      src="img/Telegram.png"
+      alt="Image 3"
+      id="image3"
+      style="width: 200px; height: 300px"
+    />
+
+    <script>
+      function showSrc(e) {
+        alert(e.target.src);
+      }
+
+      document.getElementById("image1").onclick = showSrc;
+      document.getElementById("image2").onclick = showSrc;
+      document.getElementById("image3").onclick = showSrc;
+    </script>
+  </body>
+</html>

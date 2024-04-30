@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <input type="text" id="input3" />
+    
+    <script>
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+      const input3 = document.getElementById("input3");
+    
+      let clickedInputs = new Set();
+      let inputValues = new Map();
+    
+      input1.addEventListener("change", function() {
+        inputValues.set(input1, input1.value);
+        if (!clickedInputs.has(input1)) {
+          clickedInputs.add(input1);
+          alert(inputValues.get(input1));
+        }
+      });
+    
+      input2.addEventListener("change", function() {
+        inputValues.set(input2, input2.value);
+        if (!clickedInputs.has(input2)) {
+          clickedInputs.add(input2);
+          alert(inputValues.get(input2));
+        }
+      });
+    
+      input3.addEventListener("change", function() {
+        inputValues.set(input3, input3.value);
+        if (!clickedInputs.has(input3)) {
+          clickedInputs.add(input3);
+          alert(inputValues.get(input3));
+        }
+      });
+    </script>
+  </body>
+</html>

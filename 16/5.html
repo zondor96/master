@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <input type="text" id="input3" />
+    
+    <p id="demo"></p>
+    
+    <script>
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+      const input3 = document.getElementById("input3");
+      const demo = document.getElementById("demo");
+    
+      input1.addEventListener("blur", function() {
+        demo.textContent = input1.value;
+      });
+    
+      input2.addEventListener("blur", function() {
+        demo.textContent = input2.value;
+      });
+    
+      input3.addEventListener("blur", function() {
+        demo.textContent = input3.value;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <a href="" id="myLink1">Link 1</a><br>
+    <a href="https://www.google.com" id="myLink2">Link 2</a><br>
+    <a href="https://www.wikipedia.org" id="myLink3">Link 3</a>
+
+    <script>
+        const links = document.querySelectorAll("a");
+
+        links.forEach((link) => {
+            link.addEventListener("mouseover", function () {
+                const text = link.textContent;
+                const href = link.getAttribute("href");
+                link.textContent = text + " (" + href + ")";
+            });
+
+            link.addEventListener("mouseout", function () {
+                const text = link.textContent;
+                const index = text.lastIndexOf("(");
+                link.textContent = text.slice(0, index);
+            });
+        });
+    </script>
+  </body>
+</html>
