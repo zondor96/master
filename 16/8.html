@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+    <style>
+        input {
+            border: 1px dashed purple;
+        }
+
+        input.valid {
+            border-color: green;
+        }
+
+        input.invalid {
+            border-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" data-length="5" />
+    <input type="text" data-length="3" />
+    <input type="text" data-length="10" />
+    <script>
+        const inputs = document.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                const length = input.getAttribute('data-length');
+                const value = input.value;
+
+                if (value.length === Number(length)) {
+                    input.classList.add('valid');
+                    input.classList.remove('invalid');
+                } else {
+                input.classList.add('invalid');
+                input.classList.remove('valid');
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

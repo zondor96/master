@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <p id="paragraph1">123</p>
+    <p id="paragraph2">456</p>
+    <p id="paragraph3">789</p>
+    <script>
+        const paragraphs = document.querySelectorAll('p');
+
+        paragraphs.forEach(paragraph => {
+            paragraph.addEventListener('click', () => {
+            const number = parseInt(paragraph.textContent);
+            const square = number * number;
+            paragraph.textContent = `${square}`;
+            });
+        });
+    </script>
+  </body>
+</html>

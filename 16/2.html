@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Hover Example</title>
+  </head>
+  <body>
+    <a id="link1" href="https://dist.nupp.edu.ua/login/index.php">Link 1</a><br>
+    <a id="link2" href="https://web.telegram.org/a/">Link 2</a><br>
+    <a id="link3" href="https://www.google.com.ua/?hl=uk">Link 3</a>
+
+    <script>
+      const links = document.querySelectorAll('a');
+
+      links.forEach((link) => {
+        link.addEventListener('mouseover', function () {
+          link.setAttribute('title', link.textContent);
+        });
+
+        link.addEventListener('mouseout', function () {
+          link.removeEventListener('mouseover', arguments.callee);
+        });
+      });
+    </script>
+  </body>
+</html>

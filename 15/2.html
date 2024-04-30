@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    let output = '';
+    let i = 0;
+
+    do {
+      let message = '';
+      if (i === 0) {
+        message = 'це нуль';
+      } else if (i % 2 === 0) {
+        message = 'парне число';
+      } else {
+        message = 'непарне число';
+      }
+
+      output += `${i} - ${message}<br>`;
+
+      i++;
+    } while (i <= 10);
+
+    document.getElementById('output').innerHTML = output;
+  </script>
+</body>
+</html>

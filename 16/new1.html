@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+    <style>
+        .toggle-bg {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="toggle-bg"></div>
+    <div class="toggle-bg"></div>
+    <div class="toggle-bg"></div>
+    <script>
+        const divs = document.querySelectorAll('.toggle-bg');
+        
+        function addRedBackground(event) {
+            event.target.classList.remove('green');
+            event.target.classList.add('red');
+            event.target.removeEventListener('click', addRedBackground);
+            event.target.addEventListener('click', addGreenBackground);
+        }
+
+        function addGreenBackground(event) {
+            event.target.classList.remove('red');
+            event.target.classList.add('green');
+            event.target.removeEventListener('click', addGreenBackground);
+            event.target.addEventListener('click', addRedBackground);
+        }
+
+        divs.forEach(div => {
+            div.addEventListener('click', addRedBackground);
+        });
+        
+    </script>
+  </body>
+</html>
